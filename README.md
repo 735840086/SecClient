@@ -1,16 +1,8 @@
-# SecClient  安全客户端
-# 海外一键安装脚本
+# 安全客户端
+# 一键安装脚本
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/735840086/SecClient/main/seclient.sh)"
 ```
-
-# 国内一键安装脚本
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/735840086/SecClient/main/seclientcn.sh)"
-```
-
-# WIN版下载地址
-[win版安全客户端.rar](https://github.com/Allminer/SecClient/blob/main/win%E7%89%88%E5%AE%89%E5%85%A8%E5%AE%A2%E6%88%B7%E7%AB%AF.rar)
 
 开启服务
 ```bash
@@ -38,10 +30,5 @@ systemctl stop seclient
 适用于矿场，破解宽带运营商的连接数限制，数据加密更安全
 
 # 特别注意
-如果allminer服务器后台没有上传自定义证书，那么安全客户端在添加端口的时候，是必须要勾选略过服务器证书检测,
-
-![image](https://github.com/Allminer/SecClient/assets/105292192/d1e409f1-a00e-497f-8999-3273f7029479)
-
-![image](https://github.com/Allminer/SecClient/assets/105292192/b5796c70-e165-4076-b823-cc9ff36d7257)
-
+如果hhminer服务端后台没有上传自定义证书，那么安全客户端在添加端口的时候，是必须要勾选略过服务器证书检测,
 
