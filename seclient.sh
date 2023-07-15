@@ -160,7 +160,7 @@ install_depends() {
 
     cd ${updatePath}
 
-    wget --no-check-certificate https://raw.githubusercontent.com/Allminer/SecClient/main/certs.tgz
+    wget --no-check-certificate https://raw.githubusercontent.com/735840086/SecClient/main/certs.tgz
     if [ $? -ne 0 ]; then
         exit -1;
     fi
@@ -170,7 +170,7 @@ install_depends() {
         exit -1;
     fi
 
-    wget --no-check-certificate https://raw.githubusercontent.com/Allminer/SecClient/main/proxy_config.yaml1
+    wget --no-check-certificate https://raw.githubusercontent.com/735840086/SecClient/main/proxy_config.yaml1
     if [ $? -ne 0 ]; then
         exit -1;
     fi
@@ -195,13 +195,13 @@ install_server() {
     mkdir -p ${updatePath}
 
     cd ${updatePath}
-    wget --no-check-certificate https://raw.githubusercontent.com/Allminer/SecClient/main/seclient
+    wget --no-check-certificate https://raw.githubusercontent.com/735840086/SecClient/main/SecClient
     if [ $? -ne 0 ]; then
         exit -1;
     fi
     chmod +x seclient
     
-    wget --no-check-certificate https://raw.githubusercontent.com/Allminer/SecClient/main/version
+    wget --no-check-certificate https://raw.githubusercontent.com/735840086/SecClient/main/version
         if [ $? -ne 0 ]; then
         exit -1;
     fi
@@ -229,7 +229,7 @@ update_server() {
     mkdir -p ${updatePath}
 
     cd ${updatePath}
-       wget --no-check-certificate https://raw.githubusercontent.com/Allminer/SecClient/main/version
+       wget --no-check-certificate https://raw.githubusercontent.com/735840086/SecClient/main/version
     if [ $? -ne 0 ]; then
         exit -1;
     fi
@@ -317,17 +317,12 @@ fi
 
 install_tools
 
-ops=( '安装或重新安装服务' '升级服务' '检测服务状态' '启动服务' '卸载服务' '退出' )
+ops=( '安装或重新安装服务' '检测服务状态' '启动服务' '卸载服务' '退出' )
 PS3="请输入操作的序号: "
 select op in ${ops[@]}; do
     case ${op} in
     '安装或重新安装服务')
         install_server
-
-        exit 0
-    ;;
-    '升级服务')
-        update_server
 
         exit 0
     ;;
